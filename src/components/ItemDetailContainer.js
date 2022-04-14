@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     const { idProduct } = useParams();
 
     useEffect(() => {
-        customFetch(2000, data.find(item => item.id === parseInt(idProduct)))
+        customFetch(1000, data.find(item => item.id === parseInt(idProduct)))
             .then(result => setComic(result))
             .catch(err => console.log(err))
     }, []);

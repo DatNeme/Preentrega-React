@@ -11,7 +11,7 @@ const ItemListContainer = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    customFetch(2000, data.filter(product => {
+    customFetch(1000, data.filter(product => {
         if (idCategory === undefined) return product;
         return product.categoryId === parseInt(idCategory)
     }))
