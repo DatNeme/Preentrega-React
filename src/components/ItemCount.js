@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductAmount, ProductAmountContainer } from "./styledComponents";
 
-const ItemCount = ({stock = 5, initial = 1, onAdd}) => {
+const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
     const [count, setCount] = useState(1);
 
 

@@ -24,7 +24,7 @@ const ItemDetail = ({ item }) => {
                         <Price> {item.price}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoContainer>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
                 </WrapperDetail>
             </DetailContainer>
             : <p>Cargando...</p>

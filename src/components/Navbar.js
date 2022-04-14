@@ -8,8 +8,8 @@ import 'bootstrap';
 
 const Navbar = () => {
   return (
-    <Wrapper>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <Wrapper className='fondoNav'>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fondoNav">
           <div className="container-fluid">
           <Left><Link to='/'><Logo><img src={logo} /></Logo></Link></Left>
             <button
@@ -25,9 +25,9 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
              <Center>
-                <Link to='/category/1' className="menuItem"><MenuItem>Spider-Man</MenuItem></Link>
+                <Link to='/category/1' className="menuItem"><MenuItem className='css-button-neumorphic'>Spider-Man</MenuItem></Link>
                 {/* <Link><MenuItem>DareDevil</MenuItem></Link>  */}
-                <Link to='/category/2' className="menuItem"><MenuItem>Crossovers</MenuItem></Link>
+                <Link to='/category/2' className="menuItem"><MenuItem className='css-button-neumorphic'>Crossovers</MenuItem></Link>
              </Center>
              <Right>
               <form className="d-flex">
@@ -40,7 +40,7 @@ const Navbar = () => {
                 ></input>
                 </MenuItem>
                 <MenuItem>
-                <button className="btn btn-outline-success" type="submit">
+                <button className="btn btn-dark" type="submit">
                   Buscar
                 </button>
                 </MenuItem>

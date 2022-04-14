@@ -22,7 +22,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="container w-100">
+      <div className="container w-50">
         <h1>Catálogo de productos</h1>
       </div>
       <div>
