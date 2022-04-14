@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
     return (
         <>
         {
-            item.image
+            item && item.image
             ?
             <DetailContainer>
                 <WrapperDetail>
