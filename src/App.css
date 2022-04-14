@@ -43,3 +43,11 @@ main{
   width: 18rem;
 }
 
+h1{
+  text-align: center;
+}
+
+.menuItem{
+  font-weight: bold;
+  color:black;
+}

@@ -3,9 +3,9 @@ import styled from "styled-components";
 //NavBar
 const Wrapper = styled.div`
     padding: 10px 20px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 `;
 
 const Left = styled.div`
@@ -21,8 +21,8 @@ const Center = styled.div`
     justify-content: center;
 `;
 
-const Logo = styled.h1`
-    font-weight: bold;
+const Logo = styled.div`
+    width: 100px;
 `;
 
 const Right = styled.div`

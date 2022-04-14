@@ -16,7 +16,7 @@ const ItemDetail = ({ item }) => {
             <DetailContainer>
                 <WrapperDetail>
                     <ImgContainer>
-                        <ImageDetail src={item.image.url} />
+                        <ImageDetail src={item.image} />
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.title}</Title>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { customFetch } from "./customFetch";
+import '../App.css'
 const {data} = require('../data') 
 
 const ItemListContainer = () => {
@@ -18,13 +19,10 @@ const ItemListContainer = () => {
         .catch(err => console.log(err))
 }, [comics]);
 
-const onAdd = (qty) => {
-  alert("You have selected " + qty + " items.");
-}
 
   return (
     <>
-      <div>
+      <div className="container w-100">
         <h1>Catálogo de productos</h1>
       </div>
       <div>

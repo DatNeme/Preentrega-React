@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import {customFetch} from "./customFetch";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 const {data} = require('../data') 
 
 const ItemDetailContainer = () => {
     const [comic, setComic] = useState({});
+    const { idProduct } = useParams();
 
     useEffect(() => {
-        customFetch(2000, data[1])
+        customFetch(2000, data.find(item => item.id === parseInt(idProduct)))
             .then(result => setComic(result))
-            .catch(error => console.log(error))
+            .catch(err => console.log(err))
     }, []);
     
     return (
