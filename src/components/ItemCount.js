@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { ProductAmount, ProductAmountContainer } from "./styledComponents";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
 
-const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
-    const [count, setCount] = useState(1);
+const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
+    const [count, setCount] = useState(0);
 
 
 useEffect(() =>{
@@ -10,13 +13,13 @@ useEffect(() =>{
 },[]);
 
 const up = () => {
-    if (count < 5) {
+    if (count < stock) {
         setCount(count + 1);
     }
 }
 
 const down = () => {
-    if (count > initial) {
+    if (count > initial+1) {
         setCount(count - 1);
     }
 }
@@ -27,9 +30,9 @@ return (
         <ProductAmount>{count}</ProductAmount>
         <button type="button" className="btn btn-dark" onClick={up}>+</button>
         {
-            stock
+            stock && count
             ? <button type="button" className="btn btn-success" onClick={() => onAdd(count)}>Añadir al carrito</button>
-            : <button type="button" className="btn btn-secondary" disabled>No hay stock</button>
+            : <button type="button" className="btn btn-secondary" disabled>Añadir al carrito</button>
         }
         
     </ProductAmountContainer>

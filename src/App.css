@@ -84,3 +84,7 @@ h1 {
 .css-button-neumorphic:active {
   box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
 }
+
+.btn{
+  margin: 3px
+}

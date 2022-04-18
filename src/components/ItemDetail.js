@@ -1,11 +1,17 @@
 import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
 import React from 'react';
+import { useState } from 'react';
+import ChkButton from './ChkButton';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
 
+    const [itemCount, setItemCount] = useState(0);
+
     const onAdd = (count) => {
         alert("Has seleccionado " + count + " items.");
+        setItemCount(count);
     }
 
     return (
@@ -24,7 +30,12 @@ const ItemDetail = ({ item }) => {
                         <Price> {item.price}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoContainer>
-                    <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+                    {
+                        itemCount === 0
+                        ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Link to={"/cart"}><ChkButton/></Link> 
+                       
+                    }
                 </WrapperDetail>
             </DetailContainer>
             : <p>Cargando...</p>

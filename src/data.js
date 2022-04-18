@@ -33,7 +33,7 @@ const data = [
     price: "$3280",
     image: ["https://i.ibb.co/WnhttLg/static-wikia-nocookie-net-640-2.jpg"],    
     description: "  The Scarlet Witch is out of control, and the fate of the entire world is in her hands. Will Magneto help his daughter or use her powers to his own benefit? Starring the Astonishing X-Men and the New Avengers! " ,
-    stock: "5",
+    stock: "0",
     category: {
         name: "Crossover",
         id: 2

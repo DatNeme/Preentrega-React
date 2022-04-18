@@ -6,7 +6,7 @@ const CartWidget = () => {
     return(
         <button type="button" className="btn position-relative circulo">
             <FontAwesomeIcon icon={faCartShopping} className="carrito" />
-            <span className="position-absolute top-0 start-99 translate-middlle badge rounded-pill bg-danger">14</span>
+            <span className="position-absolute top-0 start-99 translate-middlle badge rounded-pill bg-danger">5</span>
         </button>
     )
 }

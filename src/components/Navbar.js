@@ -44,7 +44,7 @@ const Navbar = () => {
                   Buscar
                 </button>
                 </MenuItem>
-                <CartWidget/>
+                <Link to={'/cart'}><CartWidget/></Link>
               </form>
               </Right>
             </div>
