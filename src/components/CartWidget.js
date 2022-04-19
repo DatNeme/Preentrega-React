@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useContext } from 'react';
+import { CartContext } from './CartContext';
 
 const CartWidget = () => {
+    const cont = useContext(CartContext);
+
+    
     return(
         <button type="button" className="btn position-relative circulo">
             <FontAwesomeIcon icon={faCartShopping} className="carrito" />

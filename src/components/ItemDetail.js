@@ -1,17 +1,19 @@
 import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
-import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import ChkButton from './ChkButton';
 import { Link } from 'react-router-dom';
+import { CartContext } from './CartContext';
 
 const ItemDetail = ({ item }) => {
 
     const [itemCount, setItemCount] = useState(0);
+    const Ctx = useContext(CartContext);
 
     const onAdd = (count) => {
         alert("Has seleccionado " + count + " items.");
         setItemCount(count);
+        Ctx.addItem(item, count);
     }
 
     return (

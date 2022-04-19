@@ -18,8 +18,8 @@ export default function Item({ id, title, price, image, stock }) {
                 <Icon>
                     <DescriptionOutlined />{stock} unid.
                 </Icon>
-                <Icon style={{cursor: "pointer"}}>
-                    <Link to={`/product/${id}`}><InfoOutlined />Details</Link>
+                <Icon style={{cursor: "help"}}>
+                    <Link to={`/product/${id}`}><InfoOutlined />Detalles</Link>
                 </Icon>
             </Info>
     </ProductContainer>

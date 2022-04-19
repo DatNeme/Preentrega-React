@@ -8,7 +8,7 @@ return(
 
 <>
 
-<Button variant="contained" endIcon={<AddShoppingCartIcon />}>
+<Button variant="contained" color="success" endIcon={<AddShoppingCartIcon />}>
   Checkout
 </Button>
 

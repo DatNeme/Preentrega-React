@@ -5,7 +5,6 @@ const Wrapper = styled.div`
     padding: 10px 20px;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 `;
 
 const Left = styled.div`
@@ -21,8 +20,8 @@ const Center = styled.div`
     justify-content: center;
 `;
 
-const Logo = styled.div`
-    width: 100px;
+const Logo = styled.h1`
+    font-weight: bold;
 `;
 
 const Right = styled.div`
@@ -158,10 +157,76 @@ const Price  = styled.span`
     font-size: 40px;
 `;
 
+//Cart
+const WrapperCart = styled.div`
+    padding: 20px;
+`;
+
+const TitleCart = styled.h1`
+    font-weight: 300;
+    text-align: center;
+`;
+
+const ContentCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Product = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+`;
+
+const ProductDetail = styled.div`
+  flex: 2;
+  display: flex;
+`;
+
+const ImageCart = styled.img`
+  width: 200px;
+`;
+
+const Details = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+const PriceDetail = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProductPrice = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+`;
+
+
+const TopText = styled.h2`
+  margin: 0px 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+`;
+
 export { 
     Wrapper, Logo, MenuItem, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
     ProductsContainer, ProductContainer,
     Circle, Image, Info, Icon,
-    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price
+    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price,
+    WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, Top, TopText
 }
