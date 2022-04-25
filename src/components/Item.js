@@ -13,7 +13,7 @@ export default function Item({ id, title, price, image, stock }) {
             <Image src={image} />
             <Info>
                 <Icon>
-                    <LocalOfferOutlined /><strong>{price}</strong>
+                    <LocalOfferOutlined /><strong>${price}</strong>
                 </Icon>
                 <Icon>
                     <DescriptionOutlined />{stock} unid.

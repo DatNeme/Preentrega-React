@@ -29,7 +29,7 @@ const ItemDetail = ({ item }) => {
                     <InfoContainer>
                         <Title>{item.title}</Title>
                         <Desc>{item.description}</Desc>
-                        <Price> {item.price}</Price>
+                        <Price> ${item.price}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoContainer>
                     {

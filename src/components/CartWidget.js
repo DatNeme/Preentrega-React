@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { Badge } from "@mui/material";
+import { ShoppingCartOutlined } from "@mui/icons-material";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
@@ -9,10 +9,9 @@ const CartWidget = () => {
 
     
     return(
-        <button type="button" className="btn position-relative circulo">
-            <FontAwesomeIcon icon={faCartShopping} className="carrito" />
-            <span className="position-absolute top-0 start-99 translate-middlle badge rounded-pill bg-danger">5</span>
-        </button>
+        <Badge badgeContent={cont.ItmCount()} color="error">
+        <ShoppingCartOutlined />
+        </Badge>
     )
 }
 

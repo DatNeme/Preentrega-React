@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const Ctx = useContext(CartContext);
+  
 
   return (
     <WrapperCart>
@@ -41,12 +42,19 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <ProductAmount>{item.countItem} unidad(es) </ProductAmount>
+                  <ProductAmount>{item.countItem} unidad(es) a </ProductAmount>
+                  <ProductAmount>{item.priceItem} c/u</ProductAmount>
                 </ProductAmountContainer>
-                <ProductPrice>{item.priceItem} c/u</ProductPrice>
+                <ProductPrice>Total: ${Ctx.ItmTotal(item.idItem)}</ProductPrice>
               </PriceDetail>
             </Product>
+            
           ))}
+          <PriceDetail>
+          <ProductAmountContainer>
+          <ProductAmount>Total de la compra: ${Ctx.cartTotal()}</ProductAmount>
+          </ProductAmountContainer>
+          </PriceDetail>
         </ContentCart>
       )}
     </WrapperCart>
