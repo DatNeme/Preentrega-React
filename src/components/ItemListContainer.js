@@ -3,9 +3,7 @@ import ItemList from "./ItemList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from 'react-router-dom';
 import '../App.css'
-import { collection, doc, getDocs } from "firebase/firestore";
-import db from '../firebaseConfig';
-
+import { fsFetch } from "../fsFetch";
 
 
 const ItemListContainer = () => {
@@ -13,18 +11,16 @@ const ItemListContainer = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    const fetchFS = async() => {    
-    const querySnapshot = await getDocs(collection(db, "products"));
-    const dataFS = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-    return dataFS;
-    }
-    fetchFS()
+    fsFetch(idCategory)
       .then(result => setComics(result))
       .catch(err => console.log(err));
-}, [comics]);
+  }, [idCategory]);
+
+  useEffect(() => {
+    return (() => {
+        setComics([]);
+    })
+}, []);
 
 
   return (

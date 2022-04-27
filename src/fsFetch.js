@@ -9,12 +9,12 @@ export const fsFetch = async (idCategory) => {
     } else {
         q = query(collection(db, "products"), orderBy('title'));
     }
-    const querySnapshot = await getDocs(q);
-    const dataFromFirestore = querySnapshot.docs.map(document => ({
+    const getProducts = await getDocs(q);
+    const productData = getProducts.docs.map(document => ({
         id: document.id,
         ...document.data()
     }));
-    return dataFromFirestore;
+    return productData;
 }
 
 export const fsFetchOne = async (idProduct) => {
@@ -27,7 +27,7 @@ export const fsFetchOne = async (idProduct) => {
           ...docSnap.data()
       }
     } else {
-      // doc.data() will be undefined in this case
-      console.log("No such document!");
+      
+      console.log("No se encuentra el producto");
     }
 }

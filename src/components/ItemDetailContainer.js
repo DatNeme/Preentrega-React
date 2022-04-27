@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
-import {customFetch} from "./customFetch";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { collection, doc, getDoc } from "firebase/firestore";
-import db from '../firebaseConfig';
-const {data} = require('../data') 
+import { fsFetchOne } from "../fsFetch";
 
 const ItemDetailContainer = () => {
     const [comic, setComic] = useState({});
     const { idProduct } = useParams();
 
     useEffect(() => {
-        customFetch(1000, data.find(item => item.id === parseInt(idProduct)))
+        fsFetchOne(idProduct)
             .then(result => setComic(result))
             .catch(err => console.log(err))
-    }, []);
+    }, [idProduct]);
     
     return (
         <ItemDetail item={comic} />
