@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { DescriptionOutlined, InfoOutlined, LocalOfferOutlined } from '@mui/icons-material';
 import { ProductContainer, Circle, Image, Info, Icon } from './styledComponents';
 
-export default function Item({ id, title, price, image, stock }) {
+export default function Item({ id, price, image, stock }) {
   return (
     <>
       <ProductContainer>
