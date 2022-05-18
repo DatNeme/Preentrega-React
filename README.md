@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Friendly Neighbourhood Comics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto final del curso de React para Coderhouse
 
-## Available Scripts
+# Sitio en funcionamiento
 
-In the project directory, you can run:
+<a href="https://www.youtube.com/" target="_blank">YouTube</a>
 
-### `npm start`
+## Sobre FN Comics
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+e-commerce sobre comics e historietas americanas de Marvel, desarrollado como un SPA (single page application).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### / o Ruta raíz
 
-### `npm test`
+En el home de la página veremos directamente los productos disponibles, pudiendo añadir más productos de forma sencilla sólo con añadirlos a la base de datos de Firebase.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### /Spiderman
 
-### `npm run build`
+Ruta dedicada a los cómics del personaje "Spiderman", donde actualmente se encuentra un solo item.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### /Crossover
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ruta dedicada a los eventos de Marvel donde se cruzan personajes de distintas franquicias, aquí podemos ver un item que no cuenta con stock disponible, así que al entrar al detalle del producto es imposible añadirlo al carrito.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### /Cart
 
-### `npm run eject`
+Ruta en la que se encuentra nuestro carrito de compras, cuando está vacío podemos encontrar un botón que nos redirige al home, para poder encontrar productos para añadir al mismo. <br>
+Cuando añadimos un producto al carrito tenemos la opción de acceder al checkout o de seguir comprando/añadiendo mas items.<br>
+Dentro del cart se hace un cálculo global del total de los items, teniendo en cuenta los distintos items y la cantidad seleccionada de cada uno.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencias
+<ul>
+<li>Bootstrap (estilos y posibilidad de hacer la página responsive)</li>
+<li>MUI (estilos e íconos)</li>
+<li>React Router DOM (rutas y navegación)</li>
+  <li>Sweetalerts2 (alertas personalizadas) </li>
+</ul>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
