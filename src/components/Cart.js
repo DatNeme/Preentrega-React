@@ -9,6 +9,7 @@ import { DeleteForever, ArrowCircleLeftOutlined, BackspaceOutlined } from "@mui/
 import { Link } from "react-router-dom";
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import db from '../firebaseConfig';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
   const Ctx = useContext(CartContext);
@@ -44,7 +45,12 @@ const Cart = () => {
     }
 
     addOrder()
-      .then(result => alert('Su orden con el ID ' + result.id + ' ha sido creada satisfactoriamente'))
+      .then(result => Swal.fire({
+        text:'Su orden con el ID ' + result.id + ' ha sido creada satisfactoriamente',
+        title:'Exito!',
+        icon:'success',
+        toast:'true',
+        position:'top',}))
       .catch(err => console.log(err));
   
     Ctx.clear();

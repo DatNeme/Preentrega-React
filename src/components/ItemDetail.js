@@ -4,6 +4,7 @@ import { useState, useContext } from 'react';
 import ChkButton from './ChkButton';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
+import Swal from 'sweetalert2';
 
 const ItemDetail = ({ item }) => {
 
@@ -11,7 +12,13 @@ const ItemDetail = ({ item }) => {
     const Ctx = useContext(CartContext);
 
     const onAdd = (count) => {
-        alert("Has seleccionado " + count + " items.");
+        Swal.fire({
+                    title: 'Exito!',
+                    text:'Has seleccionado ' + count + ' items.',
+                    icon:'success',
+                    toast:'true',
+                    position:'top',
+                    });
         setItemCount(count);
         Ctx.addItem(item, count);
     }

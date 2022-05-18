@@ -150,6 +150,8 @@ const Title = styled.h1`
 
 const Desc = styled.p`
     margin: 20px 0px;
+    color: #EBEBEB;
+  
 `;
 
 const Price  = styled.span`
@@ -193,6 +195,7 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  color: #EBEBEB;
 `;
 
 const PriceDetail = styled.div`
