@@ -4,7 +4,7 @@ Proyecto final del curso de React para Coderhouse
 
 # Sitio en funcionamiento
 
-[YouTube](youtube.com)
+<a href="https://www.youtube.com/" target="_blank">YouTube</a>
 
 ## Sobre FN Comics
 
