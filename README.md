@@ -33,5 +33,6 @@ Dentro del cart se hace un cálculo global del total de los items, teniendo en c
 <li>Bootstrap (estilos y posibilidad de hacer la página responsive)</li>
 <li>MUI (estilos e íconos)</li>
 <li>React Router DOM (rutas y navegación)</li>
+  <li>Sweetalerts2 (alertas personalizadas) </li>
 </ul>
 
