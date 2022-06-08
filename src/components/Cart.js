@@ -17,9 +17,9 @@ const Cart = () => {
   const CheckoutOrderFs = () => {
     let order = {
       buyer: {
-        name: "El bicho",
+        name: "Juan Perez",
         phone: "1234567890",
-        email:"siuuuu@gmail.com"
+        email:"Jperez@gmail.com"
       },
       items: Ctx.cartList.map(item => ({
         id: item.idItem,
