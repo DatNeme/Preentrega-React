@@ -4,7 +4,7 @@ Proyecto final del curso de React para Coderhouse
 
 # Sitio en funcionamiento
 
-<a href="https://youtu.be/Q3HA1HAG9Cs" target="_blank">YouTube</a>
+<a href="https://fn-comicstore.web.app/" target="_blank">Firebase Hosting</a>
 
 ## Sobre FN Comics
 
