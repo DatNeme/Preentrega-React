@@ -77,13 +77,13 @@ const Info = styled.div`
 
 const ProductContainer = styled.div`
     flex: 1;
-    margin: 5px;
+    margin: 15px;
     min-width: 280px;
-    height: 350px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5fbfd;
+    background-color: #cccccc;
     position: relative;
     &:hover ${Info}{
         opacity: 1;
@@ -91,15 +91,15 @@ const ProductContainer = styled.div`
 `;
 
 const Circle = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
 `;
 
 const Image = styled.img`
-    height: 75%;
+    height: 90%;
     z-index: 2;
 `;
 
